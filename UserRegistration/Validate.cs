@@ -18,5 +18,13 @@ namespace UserRegistrationProblem
             else
                 Console.WriteLine("Validation Unsuccessful");
         }
+        public void LastName(string input)
+        {
+            bool result = Regex.IsMatch(input, lastName);
+            if (result)
+                Console.WriteLine("Validation Successful");
+            else
+                Console.WriteLine("Validation Unsuccessful");
+        }
     }
 }
