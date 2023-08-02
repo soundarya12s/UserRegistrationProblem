@@ -26,5 +26,13 @@ namespace UserRegistrationProblem
             else
                 Console.WriteLine("Validation Unsuccessful");
         }
+        public void Email(string input)
+        {
+            bool result = Regex.IsMatch(input, email);
+            if (result)
+                Console.WriteLine("Validation Successful");
+            else
+                Console.WriteLine("Validation Unsuccessful");
+        }
     }
 }
