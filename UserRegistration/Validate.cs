@@ -42,5 +42,13 @@ namespace UserRegistrationProblem
             else
                 Console.WriteLine("Validation Unsuccessful");
         }
+        public void CheckCharacter(string input)
+        {
+            bool result = Regex.IsMatch(input, character);
+            if (result)
+                Console.WriteLine("Validation Successful");
+            else
+                Console.WriteLine("Validation Unsuccessful");
+        }
     }
 }
