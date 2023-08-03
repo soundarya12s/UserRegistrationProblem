@@ -10,6 +10,8 @@ namespace UserRegistrationProblem
     public class Validate
     {
         string firstName = "^[A-Z]{1}[a-z]{2,}$";
+        string lastName = "^[A-Z]{1}[a-z]{2,}$";
+      
         public void FirstName(string input)
         {
             bool result = Regex.IsMatch(input, firstName);
