@@ -5,81 +5,57 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace UserRegistrationProblem
+namespace UserRegistration
 {
     public class Validate
     {
         string firstName = "^[A-Z]{1}[a-z]{2,}$";
         string lastName = "^[A-Z]{1}[a-z]{2,}$";
         string email = "^[a-z]+[._+-]{0,1}[a-z]+[@]{1}[a-z]+[.]{1}[a-z]{2,3}([.]{1}[a-z]{2}){0,1}$";
-        string phoneNumber = "^[0-9]{2}[ ]{1}[0-9]{10}$";
+        string phoneNumber = "^([0-9]{2})([ ]{1})([0-9]{10})$";
         string character = "^.{8,}$";
         string upperCase = "^(?=.*[A-Z]).{8,}$";
         string numeric = "^(?=.*[A-Z])(?=.*[0-9]).{8,}$";
         string specialCharacter = @"^(?=.*[\$\&\+\,\:\;\=\?\@\#\|\'\<\>\.\-\^\*\(\)\%\!])(?=.*[0-9])(?=.*[A-Z]).{8,}$";
-        public void FirstName(string input)
+        public bool ValidateFirstName(string input)
         {
             bool result = Regex.IsMatch(input, firstName);
-            if (result)
-                Console.WriteLine("Validation Successful");
-            else
-                Console.WriteLine("Validation Unsuccessful");
+            return result;
         }
-        public void LastName(string input)
+        public bool ValidateLastName(string input)
         {
             bool result = Regex.IsMatch(input, lastName);
-            if (result)
-                Console.WriteLine("Validation Successful");
-            else
-                Console.WriteLine("Validation Unsuccessful");
+            return result;
         }
-        public void Email(string input)
+        public bool ValidateEmail(string input)
         {
             bool result = Regex.IsMatch(input, email);
-            if (result)
-                Console.WriteLine("Validation Successful");
-            else
-                Console.WriteLine("Validation Unsuccessful");
+            return result;
         }
-        public void PhoneNumber(string input)
+        public bool ValidatePhoneNumber(string input)
         {
             bool result = Regex.IsMatch(input, phoneNumber);
-            if (result)
-                Console.WriteLine("Validation Successful");
-            else
-                Console.WriteLine("Validation Unsuccessful");
+            return result;
         }
-        public void CheckCharacter(string input)
+        public bool ValidateCheckCharacter(string input)
         {
             bool result = Regex.IsMatch(input, character);
-            if (result)
-                Console.WriteLine("Validation Successful");
-            else
-                Console.WriteLine("Validation Unsuccessful");
+            return result;
         }
-        public void UpperCase(string input)
+        public bool ValidateUpperCase(string input)
         {
             bool result = Regex.IsMatch(input, upperCase);
-            if (result)
-                Console.WriteLine("Validation Successful");
-            else
-                Console.WriteLine("Validation Unsuccessful");
+            return result;
         }
-        public void Numeric(string input)
+        public bool ValidateNumeric(string input)
         {
             bool result = Regex.IsMatch(input, numeric);
-            if (result)
-                Console.WriteLine("Validation Successful");
-            else
-                Console.WriteLine("Validation Unsuccessful");
+            return result;
         }
-        public void SpecialCharacter(string input)
+        public bool ValidateSpecialCharacter(string input)
         {
             bool result = Regex.IsMatch(input, specialCharacter);
-            if (result)
-                Console.WriteLine("Validation Successful");
-            else
-                Console.WriteLine("Validation Unsuccessful");
+            return result;
         }
     }
 }

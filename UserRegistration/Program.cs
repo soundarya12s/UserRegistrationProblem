@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UserRegistrationProblem
+namespace UserRegistration
 {
     class Program
     {
@@ -20,42 +20,42 @@ namespace UserRegistrationProblem
                     case 1:
                         Console.WriteLine("Enter the first name to validate:");
                         string FirstName = Console.ReadLine();
-                        validate.FirstName(FirstName);
+                        validate.ValidateFirstName(FirstName);
                         break;
                     case 2:
                         Console.WriteLine("Enter the last name to validate:");
                         string LastName = Console.ReadLine();
-                        validate.LastName(LastName);
+                        validate.ValidateLastName(LastName);
                         break;
                     case 3:
                         Console.WriteLine("Enter the email to validate:");
                         string Email = Console.ReadLine();
-                        validate.Email(Email);
+                        validate.ValidateEmail(Email);
                         break;
                     case 4:
                         Console.WriteLine("Enter the phone number to validate:");
                         string PhoneNumber = Console.ReadLine();
-                        validate.PhoneNumber(PhoneNumber);
+                        validate.ValidatePhoneNumber(PhoneNumber);
                         break;
                     case 5:
                         Console.WriteLine("Enter the password to validate:");
                         string Character = Console.ReadLine();
-                        validate.CheckCharacter(Character);
+                        validate.ValidateCheckCharacter(Character);
                         break;
                     case 6:
                         Console.WriteLine("Enter the password to validate:");
                         string UpperCase = Console.ReadLine();
-                        validate.UpperCase(UpperCase);
+                        validate.ValidateUpperCase(UpperCase);
                         break;
                     case 7:
                         Console.WriteLine("Enter the password to validate:");
                         string Numeric = Console.ReadLine();
-                        validate.Numeric(Numeric);
+                        validate.ValidateNumeric(Numeric);
                         break;
                     case 8:
                         Console.WriteLine("Enter the password to validate:");
                         string SpecialCharacter = Console.ReadLine();
-                        validate.SpecialCharacter(SpecialCharacter);
+                        validate.ValidateSpecialCharacter(SpecialCharacter);
                         break;
                     case 9:
                         flag = false;
