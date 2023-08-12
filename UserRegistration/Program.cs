@@ -20,7 +20,7 @@ namespace UserRegistration
                     case 1:
                         Console.WriteLine("Enter the first name to validate:");
                         string FirstName = Console.ReadLine();
-                        validate.ValidateFirstName(FirstName);
+                        validate.ValidateWithRegex(FirstName);
                         break;
                     case 2:
                         Console.WriteLine("Enter the last name to validate:");

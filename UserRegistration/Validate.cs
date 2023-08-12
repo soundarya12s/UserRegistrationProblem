@@ -17,11 +17,11 @@ namespace UserRegistration
         string upperCase = "^(?=.*[A-Z]).{8,}$";
         string numeric = "^(?=.*[A-Z])(?=.*[0-9]).{8,}$";
         string specialCharacter = @"^(?=.*[\$\&\+\,\:\;\=\?\@\#\|\'\<\>\.\-\^\*\(\)\%\!])(?=.*[0-9])(?=.*[A-Z]).{8,}$";
-        public bool ValidateFirstName(string input)
-        {
-            bool result = Regex.IsMatch(input, firstName);
-            return result;
-        }
+        //public bool ValidateFirstName(string input)
+        //{
+        //    bool result = Regex.IsMatch(input, firstName);
+        //    return result;
+        //}
         public bool ValidateLastName(string input)
         {
             bool result = Regex.IsMatch(input, lastName);
@@ -57,5 +57,8 @@ namespace UserRegistration
             bool result = Regex.IsMatch(input, specialCharacter);
             return result;
         }
+        public bool ValidateWithRegex(string input) => Regex.IsMatch(input, firstName)
+            ? true : false;
+
     }
 }

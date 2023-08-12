@@ -12,7 +12,7 @@ namespace UserRegistrationTest
         {
             string input = "Soundarya";
             Validate firstName = new Validate();
-            bool result = firstName.ValidateFirstName(input);
+            bool result = firstName.ValidateWithRegex(input);
             Assert.IsTrue(result);
         }
         [Test]
@@ -21,6 +21,15 @@ namespace UserRegistrationTest
             string input = "Sathya";
             Validate lastName = new Validate();
             bool result = lastName.ValidateLastName(input);
+            string value = "";
+            if (result)
+            {
+                value = "HAPPY";
+            }
+            else
+            {
+                value = "SAD";
+            }
             Assert.IsTrue(result);
         }
         [Test]
@@ -29,6 +38,15 @@ namespace UserRegistrationTest
             string input = "soundaryasathya@gmail.com";
             Validate email = new Validate();
             bool result = email.ValidateEmail(input);
+            string value = "";
+            if (result)
+            {
+                value = "HAPPY";
+            }
+            else
+            {
+                value = "SAD";
+            }
             Assert.IsTrue(result);
         }
         [Test]
@@ -37,6 +55,15 @@ namespace UserRegistrationTest
             string input = "91 1234567890";
             Validate phonenumber = new Validate();
             bool result = phonenumber.ValidatePhoneNumber(input);
+            string value = "";
+            if (result)
+            {
+                value = "HAPPY";
+            }
+            else
+            {
+                value = "SAD";
+            }
             Assert.IsTrue(result);
         }
         [Test]
@@ -45,6 +72,15 @@ namespace UserRegistrationTest
             string input = "Soundarya@1205";
             Validate character = new Validate();
             bool result = character.ValidateCheckCharacter(input);
+            string value = "";
+            if (result)
+            {
+                value = "HAPPY";
+            }
+            else
+            {
+                value = "SAD";
+            }
             Assert.IsTrue(result);
         }
         [Test]
@@ -53,6 +89,15 @@ namespace UserRegistrationTest
             string input = "Soundarya1205";
             Validate uppercase = new Validate();
             bool result = uppercase.ValidateUpperCase(input);
+            string value = "";
+            if (result)
+            {
+                value = "HAPPY";
+            }
+            else
+            {
+                value = "SAD";
+            }
             Assert.IsTrue(result);
         }
         [Test]
@@ -61,6 +106,15 @@ namespace UserRegistrationTest
             string input = "Soundarya1205";
             Validate numeric = new Validate();
             bool result = numeric.ValidateNumeric(input);
+            string value = "";
+            if (result)
+            {
+                value = "HAPPY";
+            }
+            else
+            {
+                value = "SAD";
+            }
             Assert.IsTrue(result);
         }
         [Test]
@@ -69,6 +123,15 @@ namespace UserRegistrationTest
             string input = "Soundarya@1205";
             Validate special = new Validate();
             bool result = special.ValidateSpecialCharacter(input);
+            string value = "";
+            if (result)
+            {
+                value = "HAPPY";
+            }
+            else
+            {
+                value = "SAD";
+            }
             Assert.IsTrue(result);
         }
     }
