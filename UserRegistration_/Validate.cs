@@ -52,8 +52,8 @@ namespace UserRegistration_
                 bool result = Regex.IsMatch(input, specialCharacter);
                 return result;
             }
+      
 
-        
-        
+
     }
 }

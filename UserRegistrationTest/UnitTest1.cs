@@ -134,5 +134,17 @@ namespace UserRegistrationTest
             }
             Assert.IsTrue(result);
         }
+        [Test]
+        public void TestAllTrueEmails()
+        {
+            string[] input = { "abc@yahoo.com", "abc-100@yahoo.com", "abc.100@yahoo.com", "abc111@abc.com",
+                "abc-100@abc.com.au", "abc@1.com", "abc@gmail.com.com", "abc+100@gmail.com" };
+            Validate trueEmails = new Validate();
+            foreach (var item in input)
+            {
+                bool result = trueEmails.ValidateEmail(item);
+                Assert.IsTrue(result);
+            }
+        }
     }
 }
